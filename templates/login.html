@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8049f16d5b.js" crossorigin="anonymous"></script>
+    <title>Hypixel Skyblock Antispam</title>
+  </head>
+  <body>
+    <div class="card text-dark bg-light mb-3" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);min-width:0em;">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <h5 class="card-title">Please join <code id="mcoauthsrv" data-toggle="tooltip" data-placement="top" title="Click to copy" onclick="navigator.clipboard.writeText('srv.mc-oauth.net:25565');$('#mcoauthsrv').attr('title','Copied!');$('#mcoauthsrv').tooltip('dispose');$('#mcoauthsrv').tooltip();$('#mcoauthsrv').tooltip('show');">srv.mc-oauth.net:25565</code> (1.7.X-1.16.X)</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Then enter token here:</h6>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="123456" id="token">
+          <div class="input-group-append">
+            <button class="btn btn-success" type="button" onclick="window.location.href='/?token='+$('#token').val()">Login</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer bg-transparent">
+        <a href="#" class="card-link"><i class="fas fa-cloud-download-alt"></i> Download the mod</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </body>
+</html>

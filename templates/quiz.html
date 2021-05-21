@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8049f16d5b.js" crossorigin="anonymous"></script>
+    <title>Hypixel Skyblock Antispam</title>
+  </head>
+  <body>
+    <div class="card text-dark bg-light mb-3" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);min-width:0em;">
+      <div class="card-header">Please classify the following text:</div>
+      <div class="card-body">
+        <p class="card-text">{{ msg }}</p><br/>
+        <a href="/?classification=good" class="btn btn-success w-100"><i class="fas fa-check-circle"></i>&emsp;This is a good chat message (not an ad, begging, spam/scam, or other similar type of message)</a><br/>
+        <a href="/?classification=ad" class="btn btn-warning w-100"><i class="fas fa-ad"></i>&emsp;This is an ad, begging, "looking for dragon party", guild recruitment (or similar type of chat message)</a><br/>
+        <a href="/?classification=scam" class="btn btn-danger w-100"><i class="fas fa-bullhorn"></i>&emsp;This is a scam, spam, or similar rule-breaking chat message and should be reported</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+      function hcaptchaCallback(token){
+        window.location.href = `/?token=${token}`
+      }
+    </script>
+  </body>
+</html>
