@@ -171,5 +171,5 @@ async def pingpong():
 
 if __name__ == "__main__":
     config = Config()
-    config.bind = ["0.0.0.0:8080"]
+    config.bind = [os.environ['BIND']]
     asyncio.run(serve(app, config))
